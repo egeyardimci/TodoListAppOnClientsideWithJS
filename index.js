@@ -83,7 +83,7 @@ function displayTodoListProcessFunction(taskID,inputValue){
     markButtonItem.onclick = function() {
         updateTodoListAfterMark(taskID);
     }
-    markButtonItem.appendChild(document.createTextNode("Mark"));
+    markButtonItem.appendChild(document.createTextNode("Mark As Done"));
 
     todoList.appendChild(listItem);
     listItem.appendChild(deleteButtonItem);
