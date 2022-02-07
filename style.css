@@ -72,6 +72,7 @@ html{
 }
 
 .headText{
+    text-shadow: 3px 3px rgb(0 173 181);
     font-size: 3.5rem;
     width: 300px;
     margin: auto;
