@@ -4,6 +4,7 @@ h1{
 }
 
 li{
+    box-shadow: 10px 5px rgb(0 173 181);
     text-overflow:ellipsis;
     overflow:hidden;
     font-size: 20px;
