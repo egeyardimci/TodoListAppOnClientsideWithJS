@@ -68,10 +68,12 @@ function displayTodoList() {
 //I wrote this function as i do not want to write these codes in the for loop above.
 function displayTodoListProcessFunction(taskID,inputValue){
 
-    let listItem = createHtmlItem("li","",taskID,"","","");  
-    listItem.appendChild(document.createTextNode(inputValue));
+    let listItem = createHtmlItem("li","",taskID,"","","");
+	let pElement = createHtmlItem("p","",taskID + "p","","margin-block-start: 5px;margin-block-end: 5px;text-overflow:ellipsis;overflow:hidden;");
+	listItem.appendChild(pElement);
+    pElement.appendChild(document.createTextNode(inputValue));
 
-    let deleteButtonItem = createHtmlItem("button","","","","margin-left : 10px"); 
+    let deleteButtonItem = createHtmlItem("button","","","",""); 
     deleteButtonItem.onclick = function() {
         itemToBeRemoved = document.getElementById(taskID);
         itemToBeRemoved.remove();
@@ -79,7 +81,7 @@ function displayTodoListProcessFunction(taskID,inputValue){
         }
     deleteButtonItem.appendChild(document.createTextNode("Delete"));
 
-    let markButtonItem = createHtmlItem("button","","","","margin-left : 10px"); 
+    let markButtonItem = createHtmlItem("button","","","","margin-left: 10px;"); 
     markButtonItem.onclick = function() {
         updateTodoListAfterMark(taskID);
     }
